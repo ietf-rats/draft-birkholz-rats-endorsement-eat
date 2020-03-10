@@ -78,6 +78,8 @@ This section uses the same definition style for Claims as introduced in {{-eat}}
 
 Each Claim definition is accompanied by a value definition using the Concise Data Definition Language (CDDL, {{-cddl}}). An Endorsement Token that is using Claims that are defined in this document MUST include Claim values as specified in this document.
 
+Note to the reader: in this -00 I-D there are only five exemplary Claims included yet. This list is far from complete or polished.
+
 ## Component Manufacturer Claim
 
 As a fall-back alternative to the more specific oemid Claim defined in {{-eat}}, this Claim allows for byte strings representing entity identifiers that are not based on IEEE MA-L, MA-M, MA-S or an IEEE CID {{IEEE.RA}}.
@@ -91,8 +93,6 @@ manufacturer-endorsement-claim = (
 ## Component Version Claim
 
 A byte string representing a firmware version of a hardware component. Potentially, the value is derived from multiple version numbers, such as major and minor version number. The version represents the hardware component at the time the Endorsement Token was created, typically during manufacturing.
-
-Note to the reader: in this -00 I-D there are only five exemplary Claims included yet. This list is far from complete or polished.
 
 ~~~~CDDL
 version-endorsement-claim = (
