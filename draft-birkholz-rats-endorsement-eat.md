@@ -64,7 +64,7 @@ An Endorsement is defined by the RATS Architecture as a "secure statement that s
 
 Remote ATtestation procedureS (RATS) can be used to establish trust in the trustworthiness of a remote peer (the Attester). As a Relying Party typically cannot evaluate every kind of Attester by itself, the RATS architecture {{-rats-arch}} defines the Verifier role, to off-load the burden of appraisal to another entity than the Relying Party itself. The duty of a Verifier is to produce Attestation Results that are then easier to digest by a Relying Party in comparison to Evidence that can potentially be both large and/or esoteric for a generic Relying Party. Evidence are believable Claims about the Attester. Next to Evidence, a Verifier requires Endorsements. Endorsements are signed documents that include Claims about components of an Attester that an Attester cannot create Evidence about. Very prominent examples are Roots of Trust, such as a Static Code Root of Trust for Measurement as defined in the Trusted Computing Group (TCG) Glossary {{TCGGLOSS}}. These Endorsements of components of a composite device are typically provided by their manufacturer, a corresponding supply chain entity that assembles a composite device, or a certification authority.
 
-This documents defines CBOR Web Token (CWT, {{-cwt}}) Claims that can be assembled into a CWT Claims Set to compose Endorsement Tokens. This is done in the same fashion as Claims are assembled into Entity Attestation Tokens {{-eat}} that can represent, for example, attestation Evidence for RATS. 
+This documents defines CBOR Web Token (CWT, {{-cwt}}) Claims that can be assembled into a CWT Claims Set to compose Endorsement Tokens. This is done in the same fashion as Claims are assembled into Entity Attestation Tokens {{-eat}} that can represent, for example, attestation Evidence for RATS.
 
 ## Terminology
 
@@ -138,7 +138,7 @@ external = 1
 A reference to the specification document that includes evaluation results and parameters as defined by Common Criteria. This Claim value is a composite of an URI pointing to the specification document as well as a hash value specification document to ensure its authenticity. The hash entry is a composite of an algorithm ID as defined by the IANA "Named Information Hash Algorithm Registry" and the hash value as a byte string.
 
 ~~~~CDDL
-common-criteria-claim =(
+common-criteria-claim = (
   common-criteria => [ any-uri,
                        hash,
                      ]
@@ -149,7 +149,7 @@ any-uri = text
 hash = [ hash-alg-id: int,
          hash-value: bytes,
        ]
-~~~~         
+~~~~
 
 # Privacy Considerations
 
