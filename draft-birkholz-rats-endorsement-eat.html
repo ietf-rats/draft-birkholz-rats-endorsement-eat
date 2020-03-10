@@ -1100,7 +1100,7 @@ external = 1
 <p id="section-2.6-1">A reference to the specification document that includes evaluation results and parameters as defined by Common Criteria. This Claim value is a composite of an URI pointing to the specification document as well as a hash value specification document to ensure its authenticity. The hash entry is a composite of an algorithm ID as defined by the IANA "Named Information Hash Algorithm Registry" and the hash value as a byte string.<a href="#section-2.6-1" class="pilcrow">¶</a></p>
 <div class="artwork art-text alignLeft art-CDDL" id="section-2.6-2">
 <pre>
-common-criteria-claim =(
+common-criteria-claim = (
   common-criteria =&gt; [ any-uri,
                        hash,
                      ]

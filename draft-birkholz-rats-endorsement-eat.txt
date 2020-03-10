@@ -243,7 +243,7 @@ Internet-Draft               Endorsement EAT                  March 2020
    defined by the IANA "Named Information Hash Algorithm Registry" and
    the hash value as a byte string.
 
-   common-criteria-claim =(
+   common-criteria-claim = (
      common-criteria => [ any-uri,
                           hash,
                         ]
